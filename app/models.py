@@ -22,7 +22,7 @@ class Candidatos(models.Model):
     telefone = models.CharField(max_lenght=200)
 
 
- class Locais Provas(models.Model):
+ class LocaisProvas(models.Model):
     nome = models.CharField(max_lenght=200)
     endereco = models.CharField(max_lenght=200)
     cidade = models.CharField(max_lenght=200)
