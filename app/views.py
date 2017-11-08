@@ -75,6 +75,7 @@ def lista_vestibulares(request):
             'year':datetime.now().year,
         })
     )
+
 def lista_candidatos(request):
     assert isinstance(request, HttpRequest)
     return render(
@@ -88,3 +89,16 @@ def lista_candidatos(request):
         })
     )
 
+
+def lista_locaisprovas(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/lista_locaisprovas.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Locais Provas',
+            'candidatos': localprova.objects.all(),
+            'year':datetime.now().year,
+        })
+    )
